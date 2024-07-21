@@ -32,18 +32,23 @@ Key steps taken to prepare the data for analysis:
 ## Exploratory Data Analysis (EDA)
 Key areas explored:
 
-- **Age Distribution:** Analysis of age groups.
-- **Income Distribution:** Examination of income levels.
-- **Education Level:** Distribution of different education levels.
-- **Occupation Analysis:** Relationship between occupation and income.
-- **Gender Analysis:** Income distribution by gender.
+- Age Distribution: Analysis of age groups. Minimum age is 17, maximum age is 90, and average age is 38.6.
+- Income Distribution: Examination of income levels. More people are making less than or equal to $50K (7,025) compared to those making above $50K (3,680).
+- Education Level: Distribution of different education levels. Most common education level is High School graduation (3,224 people).
+- Occupation Analysis: Relationship between occupation and income.
+- Gender Analysis: Income distribution by gender.
 
 ## Advanced Data Analysis
 Performed advanced analysis to uncover deeper insights:
 
-- **Correlation Analysis:** Examined correlations between numeric columns.
-- **Income by Work Class:** Analysis of income distribution across different work classes.
-- **Gender and Income:** Examined income distribution by gender.
+- Income by Work Class: Analysis of income distribution across different work classes.
+- Gender and Income: Examined income distribution by gender. Found more income inequality, with a significant majority earning <=50K.
+- Marital Status and Income: Distribution of income based on marital status.
+- Race and Income: Analysis of income distribution by race.
+- Hours Worked per Week: Average hours worked per week across different work classes. Minimum hours worked is 1 hour, and maximum is 99 hours.
+- Capital Gain/Loss by Income: Analysis of average capital gain and loss by income group.
+- Age by Education Level: Average, minimum, and maximum age for each education level.
+- Country of Origin and Income: Income distribution based on native country.
 
 ## Dashboard in Tableau
 A comprehensive dashboard has been created in Tableau to visualize the key insights. The dashboard includes:
