@@ -45,15 +45,6 @@ Performed advanced analysis to uncover deeper insights:
 - **Income by Work Class:** Analysis of income distribution across different work classes.
 - **Gender and Income:** Examined income distribution by gender.
 
-## Visualizations
-Created visualizations to present the findings:
-
-- **Age Distribution:** Histogram of age groups.
-- **Income by Occupation:** Bar chart showing the count of income levels per occupation.
-- **Education Level:** Bar chart showing the count of each education level.
-- **Gender and Income:** Stacked bar chart showing income distribution by gender.
-- **Work Class and Income:** Heatmap showing the correlation between work class and income levels.
-
 ## Dashboard in Tableau
 A comprehensive dashboard has been created in Tableau to visualize the key insights. The dashboard includes:
 
