@@ -164,7 +164,7 @@ SELECT MIN(capital_loss) AS min_capital_loss, MAX(capital_loss) AS max_capital_l
 -- min hours worked is 1 hour and max hours worked in 99 
 SELECT MIN(hours_per_week) AS min_hours_per_week, MAX(hours_per_week) AS max_hours_per_week FROM kaggle.adult_cleaned;
 
--- Basic Data Analysis
+-- Data Analysis
 -- Age Analysis
 SELECT age, COUNT(*) AS age_count FROM kaggle.adult_cleaned GROUP BY age ORDER BY age_count ASC;  
 -- Income Distribution
@@ -175,5 +175,84 @@ SELECT income, COUNT(*) AS income_count FROM kaggle.adult_cleaned GROUP BY incom
 SELECT education, COUNT(*) AS education_count FROM kaggle.adult_cleaned GROUP BY education ORDER BY education_count ASC;  
 -- Occupation vs. Income
 SELECT occupation, income, COUNT(*) AS count FROM kaggle.adult_cleaned GROUP BY occupation, income ORDER BY count Desc;
+-- Gender based income distribution
+SELECT
+	sex,
+    income,
+    COUNT(*) as count
+FROM kaggle.adult_cleaned
+GROUP BY sex, income
+ORDER BY count DESC;
+-- Education level vs. income
+SELECT
+	education,
+    income,
+    COUNT(*) as count
+FROM kaggle.adult_cleaned
+GROUP BY education, income
+ORDER BY count DESC;
+-- Marital status vs. income
+SELECT
+	marital_status,
+    income,
+    COUNT(*) AS count
+FROM kaggle.adult_cleaned
+GROUP BY marital_status, income
+ORDER BY count DESC;
+-- Race vs. income
+SELECT
+	race,
+    income,
+    COUNT(*) AS count
+FROM kaggle.adult_cleaned
+GROUP BY race, income
+ORDER BY count DESC;
+-- Work class vs. hours per week
+SELECT 
+	work_class,
+    AVG(hours_per_week) AS avg_hours_per_week
+FROM kaggle.adult_cleaned
+GROUP BY work_class
+ORDER BY avg_hours_per_week DESC;
+-- Capital gain/loss by income
+ SELECT
+	income,
+    AVG(capital_gain) AS avg_capital_gain,
+    AVG(capital_loss) AS avg_capital_loss
+FROM kaggle.adult_cleaned
+GROUP BY income;
+-- Age distribution by education level
+SELECT
+	education,
+    AVG(age) AS avg_age,
+    MIN(age) AS min_age,
+    MAX(age) AS max_age
+FROM kaggle.adult_cleaned
+GROUP BY education
+ORDER BY avg_age;
+-- Income distribution by native country 
+SELECT 
+    native_country,
+    income,
+    COUNT(*) AS count
+FROM kaggle.adult_cleaned
+GROUP BY native_country, income
+ORDER BY count DESC;
+-- Average hours per week by occupation and income
+SELECT 
+    occupation,
+    income,
+    AVG(hours_per_week) AS avg_hours_per_week
+FROM kaggle.adult_cleaned
+GROUP BY occupation, income
+ORDER BY avg_hours_per_week DESC;
+-- Work class vs. education number
+SELECT 
+    work_class,
+    AVG(education_number) AS avg_education_number
+FROM kaggle.adult_cleaned
+GROUP BY work_class
+ORDER BY avg_education_number DESC;
 
--- Advanced Data Analysis 
+ 
+
